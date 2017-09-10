@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+    
+<html lang="es">
+    
+<head>
+<title>Menu lateral</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../css/bootstrap.min.css" />
+<link rel="stylesheet" href="../../css/menuLateral.css">
+<link rel="stylesheet" href="../../css/fontello.css">
+</head>
+    
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>
+                <a href="#" class="btn btn-default" id="menu-toggle"><i class="icon-menu"></i></i></a>
+                Titulo</h2>
+            </div>
+        </div>
+    </div>
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                    <a href="#">ADMIN</a>
+                </li>
+                <li>
+                    <a href="#">
+                    Usuarios<span class="icon-users"></span></a>
+                </li>
+                <li><a href="#" data-toggle="collapse" data-target="#reparacion" class="collapsed active">Repaciones
+                    <span class="icon-wrench"></span>
+                </a>
+                </li>
+                <ul class="sub-menu collapse" id="reparacion">
+                    <li><a href="#"><i>item</i></a></li>
+                    <li><a href="#"><i>item</i></a></li>
+                    <li><a href="#"><i>item</i></a></li>
+                </ul>
+                <li><a href="#" data-toggle="collapse" data-target="#vehiculos" class="collapsed active">Vehiculos
+                    <span class="icon-truck">
+                </a>
+                </li>
+                <ul class="sub-menu collapse" id="vehiculos">
+                    <li><a href="#"><i>item</i></a></li>
+                    <li><a href="#"><i>item</i></a></li>
+                </ul>
+                <li><a href="#" data-toggle="collapse" data-target="#viajes" class="collapsed active">Viajes
+                    <span class="icon-location">
+                </a>
+                </li>
+                <ul class="sub-menu collapse" id="viajes">
+                    <li><a href="#"><i>item</i></a></li>
+                    <li><a href="#"><i>item</i></a></li>
+                </ul>
+            </ul>
+        </div>
+
+        <!-- Page content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Sidebar</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt voluptatem explicabo, esse, provident, a dolor, tempora nam ipsum nihil neque voluptatum eius optio? Eligendi placeat perspiciatis at culpa asperiores quaerat.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+
+   
+    <script src="../../js/jquery3.2.1.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/main.js">
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.navbar{
+    margin-bottom: 0px; 
+}
+
+.navbar-toggle-left{
+    display: inline-block;
+}
+ 
+.navbar-brand{
+  display:inline-block;
+  float:none;
+}
+
+.navbar-toggle-left{
+  float:none;
+}
