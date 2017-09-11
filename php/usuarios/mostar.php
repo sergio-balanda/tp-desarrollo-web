@@ -8,11 +8,11 @@
     </div>
     <div class="row">
         <div class="col">
-            <h3>Example heading <a href="#" class="btn btn-primary">New</a></h3>
+            <h3>Registrar empleado <a href="../php/usuarios/agregar.php" class="btn btn-primary">Nuevo</a></h3>
         </div>
     </div>
 </div>
-<?php include("plantillas/search.php");?>
+
 <div class="container">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

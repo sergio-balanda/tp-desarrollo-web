@@ -4,7 +4,7 @@
             <a href="#">ADMIN</a>
         </li>
         <li>
-            <a href="#">
+            <a href="../php/usuarios.php">
             Usuarios<span class="icon-users"></span></a>
         </li>
         <li><a href="#" data-toggle="collapse" data-target="#reparacion" class="collapsed active">Repaciones

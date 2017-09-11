@@ -3,7 +3,7 @@
 <html lang="es">
     
 <head>
-<title>Index</title>
+<title>Usuarios</title>
 <!--Estilos-->
 <?php include("plantillas/cssEstilos.php");?>
 </head>
@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                 <!-- El contenido -->
-                <h3 class="">Bienvenido a la zona de administración</h3>
+                <?php include("usuarios/mostrar.php");?>
                 <!-- El contenido -->
                 </div>
             </div>
