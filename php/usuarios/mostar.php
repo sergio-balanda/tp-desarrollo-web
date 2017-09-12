@@ -8,7 +8,7 @@
     </div>
     <div class="row">
         <div class="col">
-            <h3>Registrar empleado <a href="../php/usuarios/agregar.php" class="btn btn-primary">Nuevo</a></h3>
+            <h3>Registrar empleado <a href="../php/usuarios_agregar.php" class="btn btn-primary">Nuevo</a></h3>
         </div>
     </div>
 </div>

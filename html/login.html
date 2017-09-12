@@ -7,7 +7,6 @@
 		<link rel="stylesheet" href="../css/bootstrap.min.css">
 		<script src="../js/jquery3.2.1.js"></script>
 		<script src="../js/bootstrap.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="../css/estilos.css">
 		<script type="text/javascript" src="../js/main.js"></script>
 	</head>
 	<body>
@@ -21,26 +20,31 @@
 			
 			<section>
 				<div class='row'>
-					<div class='col-md-12'>
+					<div class='col-lg-4 col-lg-offset-4 col-xs-12 col-md-4 col-md-offset-4 col-xs-12'>
 						<form action="../php/login/usuarioLog.php" class='form-horizontal' method='POST'>
-							  <div class="form-group">
-								<label class="control-label col-sm-2" for="desde">Nro de Documento:</label>
-								<div class="col-sm-3"> 
+                            <div class="form-group">
+								<label class="col-lg-12">Nro de Documento:</label>
+								<div class="col-lg-12"> 
 								  <input type="text" class="form-control" id="usuario" placeholder="Nro de Documento" name='usuario' required='required'>
 								</div>
-							 </div>
+				            </div>
 							<div class="form-group">
-								<label class="control-label col-sm-2" for="hasta">Contrase&ntildea:</label>
-								<div class="col-sm-3"> 
+								<label class="col-lg-12" for="hasta">Contrase&ntildea:</label>
+								<div class="col-lg-12"> 
 								  <input type="password" class="form-control" id="pass" placeholder="Password" name='pass' required='required'>
 								</div>
 							</div>
 							<div class="form-group">
-								<?php session_start(); if ( isset($_SESSION['error']) ) echo "<h5>" .$_SESSION['error']. "</h5>"?>
+								<?php session_start(); 
+								    if ( isset($_SESSION['error']) ) {
+								        echo $_SESSION['error'];}
+								?>
 							</div>
 							<div class="form-group"> 
-								<div class="col-sm-offset-2 col-sm-3">
-								  <button type="submit" class="btn btn-default" >Enviar</button>
+								<div class="col-lg-12">
+                                  <center>
+								  <button type="submit" class="btn btn-primary" >Enviar</button>
+								  </center>
 								</div>
 							</div>
 						</form>

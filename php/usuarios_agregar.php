@@ -26,7 +26,8 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                 <!-- El contenido -->
-                <?php include("usuarios/mostar.php");?>    
+                    <?php include("usuarios/agregar.php");?>
+  
                 <!-- El contenido -->
                 </div>
             </div>
