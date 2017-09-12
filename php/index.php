@@ -1,4 +1,12 @@
-<?php session_start();?>
+<?php
+    //reanudo la session antes del contenido
+    //rescato lo de la variable super global
+    session_start();
+    //compruebo,si se almaceno algo en la varible
+    if(!isset($_SESSION["usuario"])){
+            header("Location:../");
+    }       
+?>
 <!DOCTYPE html>
 
 <html lang="es">
