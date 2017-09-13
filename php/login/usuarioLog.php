@@ -1,5 +1,5 @@
 <?php 
-   
+   session_start();
 	date_default_timezone_set('America/Argentina/Buenos_Aires');
 	
 	$user = $_POST['usuario'];
@@ -9,17 +9,24 @@
 	
 	require_once '../conexion/conexion.php';
 
+	//prepared statement
+	$ingreso = $conexion->prepare("SELECT idUsuario,nombre
+										FROM usuario
+											WHERE num_doc = ? and password = ? ");
 	
-	$ingreso = "SELECT idUsuario,nombre FROM usuario u WHERE u.num_doc = '".$user."' and u.password = '".$pass."'";
+	$ingreso->bind_param("ss",$user,$pass);
+	$ingreso->execute();
 	
-	$result2 = mysqli_query($conexion,$ingreso);
-	$fila = mysqli_fetch_array($result2);
+	// ejecucion de sentencia preparada
+	$resultado = $ingreso->get_result();
+	$fila = $resultado->fetch_assoc();
+
 	//$id_usuario = $fila['id']; ----< por si hay auditoria
 	$nombre_usuario = $fila['nombre'];
+	//debug -- printf("%d",$resultado->num_rows)
 	
-	if( mysqli_affected_rows($conexion)==1 )
+	if( $resultado->num_rows==1 )
 	{
-		session_start();
 		$_SESSION['usuario']=$nombre_usuario;
 		//mysqli_query($link,"UPDATE usuario SET ult_ing = '".$hoy."' WHERE id = ".$id_usuario.";" ); -----> graba la auditoria
         header('Location:../index.php');
@@ -27,7 +34,6 @@
 	}
 	else 
 	{
-		session_start();
 		$_SESSION['error'] = "Usuario no Existe";
 		header('Location:../../html/login.html');
 	}

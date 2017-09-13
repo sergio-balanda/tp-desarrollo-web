@@ -1,5 +1,19 @@
+
+
+
+
 <?php
 
+$conexion = new mysqli("localhost","root","ciclon","logistica");
+
+if( $conexion->connect_errno)
+{
+	printf("Fallo la conexion: %s\n" , $conexion->connect_errno);
+	exit();
+}
+
+
+/*   FORMA PDO
 try{
 //instasear, 3 ARGUMENTOS, nombre de la bd,nombre de la base, usuario de la bd y contraseña
     $base=new PDO('mysql:host=localhost; dbname=logistica','root','');
@@ -19,5 +33,5 @@ try{
     $base=null;
 }
     
-
+*/
 ?>
