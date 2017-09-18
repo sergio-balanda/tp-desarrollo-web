@@ -1,3 +1,33 @@
+<?php
+    require_once '/conexion/control.php';
+    $obj = new controlDB();
+        $obj = new controlDB();
+    /*-------------Paginacion-------------------*/
+    $tamagno_paginas=5;//cunatos registros x pag
+    if(isset($_GET['pagina'])){
+    if($_GET['pagina']==1){
+            header("Location:usuarios.php");
+        }else{
+            $pag=$_GET['pagina'];
+        }
+    }else{
+        $pag=1;//pagina actual
+    }    
+    
+    
+    $empezar_desde=($pag-1)*$tamagno_paginas;
+    
+    //consulta, variable el objeto y la funcion de la clase
+    $datos=$obj->consultar("select * from usuario  order by nombre LIMIT $empezar_desde,$tamagno_paginas");
+    //print_r($datos);
+    
+    /*-------------Paginacion-------------------*/
+    $num_filas=count($obj->consultar("select * from usuario"));
+    $total_paginas=ceil($num_filas/$tamagno_paginas);//ceil redondea paginas
+    $sql_limite=$obj->consultar("select * from usuario"); 
+?>
+   
+
 <div class="continer">
     <div class="row">
         <div class="col">
@@ -19,24 +49,46 @@
             <div class="table-responsive">
             <table class="table table-striped table-bordered table-condensed table-hover">
 				<thead>
-					<th>Nombre</th>
-					<th>Cuit</th>
-					<th>Rol</th>
-					<th>Operaciones</th>
+					<th  class="text-center">Nombre</th>
+					<th  class="text-center">Documento</th>
+					<th  class="text-center">Nro documento</th>
+					<th  class="text-center">Nacimiento</th>
+					<th  class="text-center">Rol</th>
+					<th  class="text-center">Operacion</th>
 				</thead>
                
+                <?php foreach($datos as $td){ ?>
 				<tr>
-					<td>item</td>
-					<td>item</td>
-					<td>item</td>
+					<td><?php echo $td['nombre'];?></td>
+					<td><?php echo $td['tipo_doc'];?></td>
+					<td><?php echo $td['num_doc'];?></td>
+					<td><?php echo $td['fecha_nacimiento'];?></td>
+					<td><?php echo $td['rol'];?></td>
 					<td class="text-center">
-						<a href="#"><button class="btn btn-info">Editar</button></a>
-                         <a href="#" class="btn btn-danger">Eliminar</button></a>
+						<a href="usuarios_editar.php?id=<?php echo $td["idUsuario"]?>">
+                            <button class="btn btn-info">Editar</button>
+                        </a>
+                        
+                         <a href="usuarios/registrar.php?id=<?php echo $td["idUsuario"]?>&funcion=eliminar" class="btn btn-danger">Eliminar</button></a>
 					</td>
 				</tr>
-			
+			    <?php } ?>
+			    
 			</table>    
             </div>    
         </div>
     </div>
+</div>
+<div class="row">
+    <div class="col">
+        <?php
+        for($i=1; $i <= $total_paginas; $i++){
+        echo "<ul class='pagination'>
+               <li><a href='?pagina=" . $i . "'>" . $i . "</a></li>
+              </ul>";}
+        ?>    
+    </div>
+</div>
+<div class="row">
+    <a href="exportar.php" class="btn btn-link" target="_blank" >Exportar</a>
 </div>

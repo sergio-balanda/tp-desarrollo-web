@@ -1,84 +1,52 @@
-<div class="form-group row">
-  <label for="example-text-input" class="col-lg-6 col-lg-offset-3 col-xs-12 col-form-label">Nombre</label>
-  <div class="col-lg-6 col-lg-offset-3 col-xs-12">
-    <input class="form-control" type="text" value="" id="">
-  </div>
+<div class="row">
+    <div class="col">
+        <h3>Registrar nuevo usuario</h3>
+    </div>
 </div>
-
-<div class="form-group row">
-  <label for="" class="col-lg-6 col-lg-offset-3 col-xs-12 col-form-label">Email</label>
-  <div class="col-lg-6 col-lg-offset-3 col-xs-12">
-    <input class="form-control" type="email" value="" id="">
-  </div>
-</div>
-
-<div class="form-group row">
-  <label for="example-tel-input" class="col-lg-6 col-lg-offset-3 col-xs-12 col-form-label">Telefono</label>
-  <div class="col-lg-6 col-lg-offset-3 col-xs-12">
-    <input class="form-control" type="tel" value="1-(555)-555-5555" id="">
-  </div>
-</div>
-
-<div class="form-group row">
-  <label for="" class="col-lg-6 col-lg-offset-3 col-xs-12 col-form-label">Password</label>
-  <div class="col-lg-6 col-lg-offset-3 col-xs-12">
-    <input class="form-control" type="password" value="hunter2" id="">
-  </div>
-</div>
-
-<div class="form-group row">
-  <label for="example-text-input" class="col-lg-6 col-lg-offset-3 col-xs-12 col-form-label">Nombre</label>
-  <div class="col-lg-6 col-lg-offset-3 col-xs-12">
-    <input class="form-control" type="text" value="" id="">
-  </div>
-</div>
-
-<div class="form-group row">
-  <label for="" class="col-lg-6 col-lg-offset-3 col-xs-12 col-form-label">Email</label>
-  <div class="col-lg-6 col-lg-offset-3 col-xs-12">
-    <input class="form-control" type="email" value="" id="">
-  </div>
-</div>
-
-<div class="form-group row">
-  <label for="example-tel-input" class="col-lg-6 col-lg-offset-3 col-xs-12 col-form-label">Telefono</label>
-  <div class="col-lg-6 col-lg-offset-3 col-xs-12">
-    <input class="form-control" type="tel" value="1-(555)-555-5555" id="">
-  </div>
-</div>
-
-<div class="form-group row">
-  <label for="" class="col-lg-6 col-lg-offset-3 col-xs-12 col-form-label">Password</label>
-  <div class="col-lg-6 col-lg-offset-3 col-xs-12">
-    <input class="form-control" type="password" value="hunter2" id="">
-  </div>
-</div>
-
-<div class="form-group row">
-  <label for="example-text-input" class="col-lg-6 col-lg-offset-3 col-xs-12 col-form-label">Nombre</label>
-  <div class="col-lg-6 col-lg-offset-3 col-xs-12">
-    <input class="form-control" type="text" value="" id="">
-  </div>
-</div>
-
-<div class="form-group row">
-  <label for="" class="col-lg-6 col-lg-offset-3 col-xs-12 col-form-label">Email</label>
-  <div class="col-lg-6 col-lg-offset-3 col-xs-12">
-    <input class="form-control" type="email" value="" id="">
-  </div>
-</div>
-
-<div class="form-group row">
-  <label for="example-tel-input" class="col-lg-6 col-lg-offset-3 col-xs-12 col-form-label">Telefono</label>
-  <div class="col-lg-6 col-lg-offset-3 col-xs-12">
-    <input class="form-control" type="tel" value="1-(555)-555-5555" id="">
-  </div>
-</div>
-
-<div class="form-group row">
-  <label for="" class="col-lg-6 col-lg-offset-3 col-xs-12 col-form-label">Password</label>
-  <div class="col-lg-6 col-lg-offset-3 col-xs-12">
-    <input class="form-control" type="password" value="hunter2" id="">
-  </div>
-</div>
-
+<form action="usuarios/registrar.php" method="post">
+    <table class="table">
+        <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" name="nombre" placeholder="Nombre...">
+                </div>
+                <div class="form-group">
+                    <label for="doc">Tipo documento</label>
+                    <input type="text" class="form-control" name="tipo_doc" placeholder="Tipo...">
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" class="form-control" name="pass" placeholder="****">
+                </div>
+                <div class="form-group">
+                    <label for="">Numero documento</label>
+                    <input type="text" class="form-control" name="num_doc" placeholder="Numero...">
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="sel1">Rol</label>
+                    <select class="form-control" id="sel1" name="rol">
+                        <option value="chofer">chofer</option>
+                        <option value="admin">admin</option>
+                        <option value="supervisor">supervisor</option>
+                        <option value="mecanico">mecanico</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="">Fecha nacimiento</label>
+                    <input type="text" class="form-control" name="fecha_nacimiento" placeholder="2017-07-28">
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg">Crear</button>
+            </div> 
+    </table>
+    
+    <input type="hidden" name="funcion" value="insertar">
+    
+</form>

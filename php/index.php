@@ -4,7 +4,7 @@
     session_start();
     //compruebo,si se almaceno algo en la varible
     if(!isset($_SESSION["usuario"])){
-            header("Location:../");
+            header("Location:../html/login.html");
     }       
 ?>
 <!DOCTYPE html>

@@ -33,9 +33,7 @@
     display: none;
 }
 
-.my-navbar{
-    opacity: 0.8;
-}
+.my-navbar{}
 
 
 @media screen and (min-width: 769px){

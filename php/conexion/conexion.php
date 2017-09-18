@@ -1,10 +1,6 @@
-
-
-
-
 <?php
 
-$conexion = new mysqli("localhost","root","ciclon","logistica");
+$conexion = new mysqli("localhost","root","","logistica");
 
 if( $conexion->connect_errno)
 {
