@@ -18,13 +18,20 @@ UNLAM
 
 •	La organización de las carpetas es maso menos así:
     o	Carpeta Material tienen el bootstrap e iconos q use.
+    
     o	Carpeta fpdf es lo que se usa para pasar a pdf.
+    
     o	Dentro php:
         	/conexión la conexión.
+        
         	/Login validación del login usuarioLog y salir by nico.
+        
         	/pdf lo necesario para exportar pdf un archivo con plantilla y otro con pdfUsuario.
+        
         	carpeta /plantilla, tiene el menú, los estilos css, sidebar etc. Se los llaman con include en los archivos que quieran.
+        
         	en /usuarios tienen vistas parciales para no tener un código hiper largo en cada página y un archivo mas que es importante que es el      registrar que es que hace la magia de modificar insertar y eliminar (lo mismo se debería repetir para cada caso ejemplo vehículo crear carpeta        vehículo con las vistas parciales). Estas vistas son casi todos formularios.
+        
         	Carpeta php lo que hay volcado ahí son como los index de cada vista que tienen los include a las demas carpetas segun cada caso.
         
         
