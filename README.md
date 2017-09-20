@@ -30,7 +30,10 @@ UNLAM
         
         	carpeta /plantilla, tiene el menú, los estilos css, sidebar etc. Se los llaman con include en los archivos que quieran.
         
-        	en /usuarios tienen vistas parciales para no tener un código hiper largo en cada página y un archivo mas que es importante que es el      registrar que es que hace la magia de modificar insertar y eliminar (lo mismo se debería repetir para cada caso ejemplo vehículo crear carpeta        vehículo con las vistas parciales). Estas vistas son casi todos formularios.
+        	en /usuarios tienen vistas parciales para no tener un código hiper largo en cada página y un archivo 
+        mas que es importante  que es el registrar que es que hace la magia de modificar insertar y eliminar 
+        (lo mismo se debería repetir para cada caso ejemplo vehículo crear carpeta vehículo con las vistas parciales). 
+        Estas vistas son casi todos formularios.
         
         	Carpeta php lo que hay volcado ahí son como los index de cada vista que tienen los include a las demas carpetas segun cada caso.
         
