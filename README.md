@@ -35,4 +35,5 @@ UNLAM
         	Carpeta php lo que hay volcado ahí son como los index de cada vista que tienen los include a las demas carpetas segun cada caso.
         
         
-        Gran parte del código esta comentado si no entienden pregunten. Modifiquen y suban lo que quieran, pero fíjense que todo siga funcionando.
+        Gran parte del código esta comentado si no entienden pregunten. Modifiquen y suban lo que quieran, 
+        pero fíjense que todo siga funcionando.
