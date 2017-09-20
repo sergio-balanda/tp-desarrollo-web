@@ -79,6 +79,7 @@
         </div>
     </div>
 </div>
+
 <div class="row">
     <div class="col">
         <?php
@@ -89,6 +90,7 @@
         ?>    
     </div>
 </div>
+
 <div class="row">
-    <a href="exportar.php" class="btn btn-link" target="_blank" >Exportar</a>
+    <a href="pdf/exportarUsuario.php" class="btn btn-link" target="_blank" >Exportar</a>
 </div>

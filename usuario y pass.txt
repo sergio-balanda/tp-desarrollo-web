@@ -1,2 +1,3 @@
 numero doc = 2
+
 contraseña = 1234
