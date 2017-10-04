@@ -15,7 +15,7 @@
             $this->con=mysqli_connect($host,$user,$pass) or die("Error en la conexion");
             //selecciona la base
             mysqli_select_db($this->con,$db_name) or die("no se encontro bbdd");
-                
+            mysqli_set_charset($this->con,"utf8");    
             //echo "conexion ok";
             }catch(Exception $ex){
                 throw $ex;

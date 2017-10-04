@@ -12,9 +12,9 @@
         </a>
         </li>
         <ul class="sub-menu collapse" id="reparacion">
-            <li><a href="../php/mantenimiento_vehiculo"><i>Mantenimiento</i></a></li>
-            <li><a href="#"><i>item</i></a></li>
-            <li><a href="#"><i>item</i></a></li>
+            <li><a href="../php/mantenimiento_vehiculo.php"><i>Mantenimiento</i></a></li>
+            <li><a href="../php/reporte_mantenimiento.php"><i>Reporte</i></a></li>
+            <li><a href="../php/calendario_service.php"><i>Service</i></a></li>
         </ul>
         <li><a href="#" data-toggle="collapse" data-target="#vehiculos" class="collapsed active">Vehiculos
             <span class="icon-truck">

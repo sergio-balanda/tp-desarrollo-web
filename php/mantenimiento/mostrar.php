@@ -2,10 +2,11 @@
     require_once '/conexion/control.php';
     $obj = new controlDB();
     
-    $datos=$obj->consultar("select  m.tipo_vehiculo,m.fecha_entrada,m.repuestos,m.costo,u.nombre 
+    $datos=$obj->consultar("select  m.tipo_vehiculo,m.fecha_entrada,m.repuestos,m.costo,m.km_unidad,u.nombre,
+        m.externo
         from mantenimiento m 
         join usuario u on 
-        u.idUsuario=m.idUsuario");
+        u.idUsuario=m.idUsuario order by m.fecha_entrada");
 ?>
 
 <div class="continer">
@@ -29,8 +30,10 @@
 				<thead>
 					<th  class="text-center">Mecanico</th>
 					<th  class="text-center">Tipo Vehiculo</th>
+					<th  class="text-center">Km</th>
 					<th  class="text-center">Fecha entrada</th>
 					<th  class="text-center">Repuestos</th>
+					<th  class="text-center">Service externo</th>
 					<th  class="text-center">Costo</th>
 					<th  class="text-center">Operacion</th>
 				</thead>
@@ -38,8 +41,10 @@
 				<tr>
 					<td><?php echo $td['nombre'];?></td>
 					<td><?php echo $td['tipo_vehiculo'];?></td>
+					<td><?php echo $td['km_unidad'];?></td>
 					<td><?php echo $td['fecha_entrada'];?></td>
 					<td><?php echo $td['repuestos'];?></td>
+					<td><?php echo $td['externo'];?></td>
 					<td><?php echo $td['costo'];?></td>
 					<td class="text-center">
 						<a href="#">

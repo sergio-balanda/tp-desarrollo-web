@@ -91,6 +91,7 @@
                 
                <tr>
                    <td colspan="3" class="text-center">
+                   <a href="usuarios.php" class="btn btn-danger">Volver</a>
                    <input type="submit" value="Modificar" class="btn btn-primary">
                    </td>
                </tr>
